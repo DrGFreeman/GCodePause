@@ -9,7 +9,7 @@ setup(
     author_email='drgfreeman@tuta.io',
     url='https://github.com/DrGFreeman/GCode-Layer-Pause',
     license='MIT',
-    python_required='>=3.6',
+    python_requires='>=3.6',
     install_requires=['pyyaml'],
     py_modules=['gcodepause'],
 )
