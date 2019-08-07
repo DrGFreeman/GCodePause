@@ -77,7 +77,7 @@ class GCodeFile():
         else:
             layers = [height for height in sorted(self.layers.keys()) if height > z]
             if len(layers) > 0:
-                warn(f"{z} does not exist, using the next higher layer ({layers[0]}).")
+                warn(f"No layer found at {z}; using the next higher layer ({layers[0]}).")
                 return self.layers.get(layers[0])
             else:
                 warn(f"{z} is above all layers.")
