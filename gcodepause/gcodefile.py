@@ -10,7 +10,7 @@ template.append(";BEGIN_PAUSE\n")
 template.append("G91    ; Put in relative mode\n")
 template.append("G1 Z{z_offset:.4g}    ; Raise hot end by {z_offset:.4g}mm\n")
 template.append("G90    ; Put back in absolute mode\n")
-template.append("G1 X{x:.4g} Y{y:.4g}    ; Move the X & Y away from the print\n")
+template.append("G1 X{x_pause:.4g} Y{y_pause:.4g}    ; Move the X & Y away from the print\n")
 template.append("M0 {message}    ; Pause and wait for the user\n")
 template.append(";END_PAUSE\n")
 
@@ -92,7 +92,7 @@ class GCodeFile():
         else:
             raise ValueError(f"z_offset must be greater than zero, got  {z_offset}")
         if x_pause > 0 and y_pause > 0:
-            text[4] = text[4].format(x=x_pause, y=y_pause)
+            text[4] = text[4].format(x_pause=x_pause, y_pause=y_pause)
         else:
             e = f"x_pause and y_pause must be greater than zero, got ({x_pause, y_pause})"
             raise ValueError(e)
