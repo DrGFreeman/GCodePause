@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 from gcodepause import __version__
 
 setup(
@@ -11,5 +11,6 @@ setup(
     license='MIT',
     python_requires='>=3.6',
     install_requires=['pyyaml'],
-    py_modules=['gcodepause'],
+    packages=find_packages(),
+    #py_modules=['gcodepause'],
 )
