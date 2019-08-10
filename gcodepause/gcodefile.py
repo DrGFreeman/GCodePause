@@ -11,7 +11,8 @@ template.append("G91    ; Put in relative mode\n")
 template.append("G1 Z{z_offset:.4g}    ; Raise hot end by {z_offset:.4g}mm\n")
 template.append("G90    ; Put back in absolute mode\n")
 template.append("G1 X{x_pause:.4g} Y{y_pause:.4g}    ; Move the X & Y away from the print\n")
-template.append("M0 {message}    ; Pause and wait for the user\n")
+template.append("M117 {message}    ; Diplay message to user\n")
+template.append("M0     ; Pause and wait for the user\n")
 template.append(";END_PAUSE\n")
 
 class GCodeFile():
@@ -52,7 +53,8 @@ class GCodeFile():
             line = line.strip('\n').strip('\r')
             if re.match(r'\A(;[0-9]+\.*[0-9]*){1}\Z', line):
                 height = float(line.strip(';'))
-                layers[height] = line_num
+                if height not in layers:
+                    layers[height] = line_num
         
         self.layers = layers
 
