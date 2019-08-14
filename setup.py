@@ -1,9 +1,8 @@
 from setuptools import setup, find_packages
-from gcodepause import __version__
 
 setup(
     name='gcodepause',
-    version=__version__,
+    version='0.1.0',
     description='A package to add pauses in 3D printing GCODE',
     author='Julien de la Bruère-Terreault',
     author_email='drgfreeman@tuta.io',
