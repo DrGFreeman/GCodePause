@@ -12,5 +12,4 @@ setup(
     python_requires='>=3.6',
     install_requires=['pyyaml'],
     packages=find_packages(),
-    #py_modules=['gcodepause'],
 )
