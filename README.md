@@ -6,16 +6,16 @@ By Julien de la Bruère-Terreault (drgfreeman@tuta.io)
 
 ## Installation
 
-The *gcodepause* package requires *pyyaml* to be installed. Install it using pip:
+The *gcodepause* package can be installed using pip:
 
 ```
-$ pip install pyyaml
+pip install git+https://github.com/DrGFreeman/GCodePause.git
 ```
 
-Then install the *gcodepause* package itself:
+Or from sources:
 
 ```
-$ pip install install git+https://github.com/DrGFreeman/GCodePause.git
+python setup.py install
 ```
 
 ## Usage
