@@ -28,7 +28,7 @@ from gcodepause import GCodeFile
 # Create a GCodeFile instance from the source .gcode file
 gcode = GCodeFile('source.gcode')
 
-# Add a pause at the begininf of layer at height of 4.6mm (z).
+# Add a pause at the begining of layer at height of 4.6mm (z).
 #   Raise the print head 25mm (z_offset) and move the
 #   print head to X,Y coordinates 125, 200 (x_pause, y_pause).
 gcode.insert_pause(z=4.6, z_offset=25, x_pause=125, y_pause=200,
